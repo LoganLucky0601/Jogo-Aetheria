@@ -1,0 +1,12 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Aetheria – Fim</title><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,400;0,600;1,400&family=Orbitron:wght@600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css"></head>
+<body><canvas id="bg"></canvas>
+<main class="hero"><h1 id="t" style="font-size:clamp(2rem,7vw,5rem)">…</h1><p class="sub" id="s"></p><p class="res" id="r"></p>
+<div class="row"><a class="btn" href="jogo.html">Jogar novamente</a><a class="ghost" href="index.html">Menu</a></div></main>
+<script src="bg.js"></script>
+<script>
+let d={};try{d=JSON.parse(localStorage.getItem('aeth_res')||'{}')}catch(_){}
+const w=d.res==='vitoria';
+t.textContent=w?'Você é o ápice':'Você foi absorvido';
+s.textContent=w?'Nada se perdeu: tudo virou você.':'Nada se perdeu: tudo se transforma.';
+r.textContent=d.name?d.name+' chegou a '+d.st+' com massa '+d.score+'.':'Nenhuma partida registrada ainda.';
+</script></body></html>

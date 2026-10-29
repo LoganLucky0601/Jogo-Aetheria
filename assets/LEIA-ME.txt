@@ -1,0 +1,1 @@
+Coloque aqui a imagem do meteoro com o nome: meteoro.png (fundo transparente, de preferência quadrada). O jogo a usa automaticamente nos asteroides; sem ela, usa um meteoro gerado no mesmo estilo.

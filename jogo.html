@@ -1,0 +1,8 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"><title>Aetheria – Jogo</title><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,400;0,600;1,400&family=Orbitron:wght@600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css"></head>
+<body><canvas id="c"></canvas>
+<div id="hud"><span class="n" id="hn"></span><span class="s" id="hs"></span><span class="s">Massa <b id="hp">10</b></span><div class="bar"><div id="hb"></div></div></div>
+<button class="ghost" id="pb" aria-label="Pausar"><svg viewBox="0 0 18 18"><rect x="3" y="2" width="4" height="14" rx="1"/><rect x="11" y="2" width="4" height="14" rx="1"/></svg></button>
+<div id="msg"></div><div id="flash"></div>
+<div class="veil" id="pz" hidden><div class="card"><h2>Pausado</h2><button class="btn" id="go">Continuar</button><a class="ghost" href="index.html">Voltar ao início</a><div class="keys"><span><kbd>W</kbd> <kbd>A</kbd> <kbd>S</kbd> <kbd>D</kbd> ou setas: mover</span><span>Mouse pressionado: seguir o cursor</span><span><kbd>Shift</kbd>: virar cometa (só como asteroide)</span><span><kbd>P</kbd> ou <kbd>Esc</kbd>: pausar / continuar</span></div></div></div><div id="tip">Segure o mouse (ou WASD / setas) para guiar. Shift: cometa. P: pausa. Absorva o que é menor, fuja do que é maior.</div>
+<div id="load"><h1 style="font-size:clamp(2rem,7vw,4rem)">AETHERIA</h1><p id="ph"></p><div class="bar"><div id="lb"></div></div></div>
+<script src="game.js"></script></body></html>

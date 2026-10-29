@@ -1,0 +1,15 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Aetheria</title><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,400;0,600;1,400&family=Orbitron:wght@600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css"></head>
+<body><canvas id="bg"></canvas>
+<main class="hero"><h1>AETHERIA</h1><button class="btn" id="play">Jogar</button></main>
+<div class="veil" id="veil" hidden><form class="card" id="card"><h2>Como devemos chamar você?</h2>
+<label>Nome<input id="nome" maxlength="16" placeholder="Digite seu nome" autocomplete="off"></label>
+<button type="button" class="ghost" id="auto">Gerar nome automático</button><button class="btn" type="submit">INICIAR</button></form></div>
+<script src="bg.js"></script>
+<script>
+const v=document.getElementById('veil'),n=document.getElementById('nome');
+const gen=()=>['Rochedo','Cometa','Nébula','Quasar','Pulsar','Órion','Vega','Mirtilo'][Math.random()*8|0]+'-'+(Math.random()*900+100|0);
+document.getElementById('play').onclick=()=>{v.hidden=false;n.focus()};
+document.getElementById('auto').onclick=()=>{n.value=gen()};
+v.onclick=e=>{if(e.target===v)v.hidden=true};
+document.getElementById('card').onsubmit=e=>{e.preventDefault();try{localStorage.setItem('aeth_nome',n.value.trim()||gen())}catch(_){}location.href='jogo.html'};
+</script></body></html>
